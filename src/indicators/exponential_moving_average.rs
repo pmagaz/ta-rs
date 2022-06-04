@@ -68,7 +68,7 @@ impl ExponentialMovingAverage {
             0 => Err(TaError::InvalidParameter),
             _ => Ok(Self {
                 period,
-                k: 2.0 / (period + 1) as f64,
+                k: 1.0 / period as f64,
                 current: 0.0,
                 is_new: true,
             }),
