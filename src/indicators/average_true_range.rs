@@ -1,7 +1,7 @@
 use std::fmt;
 
 use crate::errors::Result;
-use crate::indicators::{SimpleMovingAverage, TrueRange};
+use crate::indicators::{ExponentialMovingAverage, TrueRange};
 use crate::{Close, High, Low, Next, Period, Reset};
 
 #[cfg(feature = "serde")]
@@ -61,14 +61,14 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Clone)]
 pub struct AverageTrueRange {
     true_range: TrueRange,
-    ema: SimpleMovingAverage,
+    ema: ExponentialMovingAverage,
 }
 
 impl AverageTrueRange {
     pub fn new(period: usize) -> Result<Self> {
         Ok(Self {
             true_range: TrueRange::new(),
-            ema: SimpleMovingAverage::new(period)?,
+            ema: ExponentialMovingAverage::new(period)?,
         })
     }
 }
