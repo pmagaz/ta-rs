@@ -81,11 +81,11 @@ pub use self::smoothed_directional_movement::{
     SmoothedNegativeDirectionalMovement, SmoothedPositiveDirectionalMovement,
 };
 
-mod directional_indicator;
-pub use self::directional_indicator::{NegativeDirectionalIndicator, PositiveDirectionalIndicator};
-
 mod directional_movement_index;
 pub use self::directional_movement_index::DirectionalMovementIndex;
 
 mod average_directional_index;
 pub use self::average_directional_index::AverageDirectionalIndex;
+
+mod directional_indicator;
+pub use self::directional_indicator::{NegativeDirectionalIndicator, PositiveDirectionalIndicator};
