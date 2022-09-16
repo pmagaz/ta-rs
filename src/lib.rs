@@ -66,3 +66,5 @@ pub use crate::traits::*;
 pub mod data_item;
 pub use crate::data_item::DataItem;
 
+pub mod test_helper;
+pub use crate::test_helper::Bar;
